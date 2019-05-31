@@ -38,7 +38,7 @@ class RunaMenu extends Component {
 		  </Button>		  
 		  <Menu id="simple-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
 			{adminSession == 'true' ?  <MenuItem selected={pathname === '/register'} onClick={this.handleClose} component={Link} to="/register">Check Time Register</MenuItem> : false}
-			{adminSession == 'true' ?  <MenuItem selected={pathname === '/employees'} onClick={this.handleClose} component={Link} to="/employees">Employee Info</MenuItem> : false}
+			{adminSession == 'true' ?  <MenuItem selected={pathname === '/employee'} onClick={this.handleClose} component={Link} to="/employee">Employee Info</MenuItem> : false}
 			<MenuItem selected={pathname === '/report'} onClick={this.handleClose} component={Link} to="/report">In/Out Report</MenuItem>
 			<Logout {...this.props}/>
 		  </Menu>

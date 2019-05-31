@@ -7,6 +7,7 @@ import Login from './Login';
 import Register from './Register';
 import Employees from './Employees';
 import Report from './Report';
+import EmployeeEditInfo from './EmployeeEditInfo';
 
 import './App.css';
 import { connect } from "react-redux";
@@ -20,7 +21,8 @@ class App extends Component {
 			  <Route path="/login" component={Login} />
 			  <Route path="/secret" component={Secret} />
 			  <Route path="/register" component={withAuth(Register)} />
-			  <Route path="/employees" component={withAuth(Employees)} />
+			  <Route path="/employee/:id" component={withAuth(EmployeeEditInfo)} />
+			  <Route path="/employee" component={withAuth(Employees)} />
 			  <Route path="/report" component={withAuth(Report)} />
 			</Switch>
 		  </div>

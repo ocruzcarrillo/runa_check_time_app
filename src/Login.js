@@ -52,7 +52,7 @@ export default class Login extends Component {
 
   render() {
     return (
-		<LoginForm onSubmit={this.onSubmit}/>
+		<LoginForm onSubmit={this.onSubmit} handleInputChange={this.handleInputChange}/>
     );
   }
 }

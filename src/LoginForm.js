@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const LoginForm = props => {
-  const { handleSubmit, pristine, reset, submitting } = props
+  const { handleSubmit, handleInputChange, pristine, reset, submitting } = props
   const classes = useStyles();
   
   const renderTextField = ({
@@ -80,6 +80,7 @@ const LoginForm = props => {
 				type="email"
 				validate={email}
 				label="Username in email format"
+				onchange={handleInputChange}
 			  />
 			</Grid>
 		  </Grid>
@@ -90,6 +91,7 @@ const LoginForm = props => {
 				name="password"
 				type="password"
 				label="Password"
+				onchange={handleInputChange}
 			  />
 			</Grid>
 			<Button 
