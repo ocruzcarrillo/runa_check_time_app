@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import withAuth from './withAuth';
+import Home from './Home';
+import Secret from './Secret';
+import Login from './Login';
+import Register from './Register';
+import Employees from './Employees';
+import Report from './Report';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import { connect } from "react-redux";
+
+class App extends Component {
+	render() {
+	  return (
+		  <div>
+			<Switch>
+			  <Route path="/" exact component={withAuth(Home)} />
+			  <Route path="/login" component={Login} />
+			  <Route path="/secret" component={Secret} />
+			  <Route path="/register" component={withAuth(Register)} />
+			  <Route path="/employees" component={withAuth(Employees)} />
+			  <Route path="/report" component={withAuth(Report)} />
+			</Switch>
+		  </div>
+	  );
+	}
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+});
+const mapDispatchToProps = dispatch => ({
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
