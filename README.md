@@ -11,9 +11,9 @@ Functional Requirements:
 
 ## Installation
 
-Clone the repository [https://github.com/ocruzcarrillo/runa_api_check_time](https://github.com/ocruzcarrillo/runa_api_check_time)
+Clone the repository [https://github.com/ocruzcarrillo/runa_check_time_app](https://github.com/ocruzcarrillo/runa_check_time_app)
 ```bash
-git clone https://github.com/ocruzcarrillo/runa_api_check_time
+git clone https://github.com/ocruzcarrillo/runa_check_time_app
 ```
 
 Initialize the App
